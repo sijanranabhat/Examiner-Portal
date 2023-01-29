@@ -1,0 +1,45 @@
+<div  id="container" class="container">
+
+    <!-- Question card -->
+    <div class="row align-items-center" id="question-section">
+        <div class="card" id="question-box">
+            <div class="card-body" id="question-body">               
+
+                <!-- Question-->
+                <div id="question-text-container">
+                    <h5 class="card-title" id="question">this is question</h5>
+
+                    <!-- Feedback -->
+                    <div *ngIf="pause" class="alert" [ngClass]="success? 'alert-success' : 'alert-danger'" id="feedback-container">
+                        <h2 *ngIf="success" id="feedback-success">Correct!</h2>
+                        <h2 *ngIf="!success" id="feedback-fail">Try again</h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Options -->
+    <div class="row align-items-center" id="option-section">
+        <div class="row" style="width: 100%;">
+            <div *ngFor='let o of options; index as i' class="col-lg-6">
+                <button (click)="answer(i)" id="option" type="button"
+                    class="btn btn-lg btn-block"
+                    > </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Next button -->
+    <div *ngIf="pause" id="next-section">
+        <div id="next-row">
+            <button (click)="goNext()" id="next" type="button" class="btn btn-primary2 btn-block btn-lg">Next
+                </button> </div>
+    </div>
+</div>
+
+
