@@ -1,15 +1,37 @@
-﻿<div class="container">
-<div class="card text-center ">
-    <div class="card-header">
-      Candidate Information
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">John Doe</h5>
-      <p class="card-text">Cubical Number: 1</p>
-      <p class="card-text">Candidate Id: 1</p>      
-      <a href="/questionroom" class="btn btn-primary">Go to Room</a>
-    </div>
-    <div class="card-footer text-muted">      
+﻿<div class="card">
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-3 mt-1">
+        <label>Please Select Cubical Number: </label>
+      </div>
+      <div class="col-3">
+        <select class="form-select form-select-md mb-3" [(ngModel)]="cubicalText" aria-label=""
+          (change)="onCubicalSelect($event)">
+          <option *ngFor="let cubical of cubicals" value="{{cubical.id}}">{{cubical.value}}</option>
+        </select>
+      </div>
     </div>
   </div>
+
+
+  <div class="container">
+  <div class="row mt-2 mb-3" *ngIf="showCandidate">
+    <div class="col-5"></div>
+    <div class="col-3" *ngFor="let candidate of candidates">
+      <div class="card ">
+        <div class="card-header">
+          Candidate Information
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Name: {{candidate.name}}</h5>
+          <p class="card-text">Cubical Number: {{candidate.cubicalNumber}}</p>
+          <p class="card-text">Candidate Id: {{candidate.candidateId}}</p>
+          <a href="/questionroom" class="btn btn-primary">Check In</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-4"></div>
+  </div>
+</div>
 </div>
