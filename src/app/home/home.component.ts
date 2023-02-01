@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
     cubicalText:string ='';
     defaultText = "select"
     showCandidate:boolean =false;    
+    isDisplayQuestion:boolean=false;
 
     constructor(private accountService: AccountService) {
         this.user = this.accountService.userValue;
@@ -34,7 +35,8 @@ export class HomeComponent implements OnInit {
 
     onCubicalSelect(event:any){   
         this.candidates = this.getCandidates();
-        if(this.cubicalText){                    
+        if(this.cubicalText){    
+            this.isDisplayQuestion  = false;              
         this.showCandidate = true;        
         this.candidates = this.candidates.filter(x=>x.cubicalNumber == this.cubicalText);        
     }
@@ -58,6 +60,10 @@ export class HomeComponent implements OnInit {
             candidateId:3
         }]
 
+    }
+
+    onCheckInClick(){
+        this.isDisplayQuestion = true;
     }
 
     }

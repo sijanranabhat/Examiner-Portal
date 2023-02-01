@@ -27,11 +27,14 @@
           <h5 class="card-title">Name: {{candidate.name}}</h5>
           <p class="card-text">Cubical Number: {{candidate.cubicalNumber}}</p>
           <p class="card-text">Candidate Id: {{candidate.candidateId}}</p>
-          <a href="/questionroom" class="btn btn-primary">Check In</a>
+          <button class="btn btn-primary" (click)="onCheckInClick()">Check In</button>
         </div>
       </div>
     </div>
     <div class="col-4"></div>
   </div>
+</div>
+<div class="container" *ngIf="isDisplayQuestion">
+  <component-question></component-question>
 </div>
 </div>

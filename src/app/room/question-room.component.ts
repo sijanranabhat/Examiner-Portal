@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '@app/_models';
 import { AccountService } from '@app/_services';
 
-@Component({ templateUrl: 'question-room.component.html' })
+@Component({ selector:'component-question',
+    templateUrl: 'question-room.component.html' })
 
 export class RoomComponent implements  OnInit{
 
