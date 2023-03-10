@@ -15,13 +15,15 @@ import { RoomComponent } from './room/question-room.component';
 import {LoginComponent} from './account/login.component';
 
 
+
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule, 
+        
     ],
     declarations: [
         AppComponent,

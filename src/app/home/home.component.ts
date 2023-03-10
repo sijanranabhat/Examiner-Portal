@@ -48,16 +48,6 @@ export class HomeComponent implements OnInit {
             name: 'John Doe', 
             cubicalNumber: 1, 
             candidateId:1
-        }, 
-        {
-            name: 'Matt Damon', 
-            cubicalNumber: 2, 
-            candidateId:2
-        },
-        {
-            name: 'Tom Cruise', 
-            cubicalNumber: 3, 
-            candidateId:3
         }]
 
     }

@@ -1,5 +1,5 @@
-﻿<div class="card">
-  <div class="container mt-3">
+﻿ <div class="card">
+  <!-- <div class="container mt-3">
     <div class="row">
       <div class="col-2"></div>
       <div class="col-3 mt-1">
@@ -12,22 +12,22 @@
         </select>
       </div>
     </div>
-  </div>
+  </div>  -->
 
 
   <div class="container">
-  <div class="row mt-2 mb-3" *ngIf="showCandidate">
+  <div class="row mt-2 mb-3">
     <div class="col-5"></div>
     <div class="col-3" *ngFor="let candidate of candidates">
       <div class="card ">
         <div class="card-header">
-          Candidate Information
+          Examiner Details 
         </div>
         <div class="card-body">
           <h5 class="card-title">Name: {{candidate.name}}</h5>
           <p class="card-text">Cubical Number: {{candidate.cubicalNumber}}</p>
           <p class="card-text">Candidate Id: {{candidate.candidateId}}</p>
-          <button class="btn btn-primary" (click)="onCheckInClick()">Check In</button>
+          <a href="/questionroom" class="btn btn-primary">Confirm</a>
         </div>
       </div>
     </div>
